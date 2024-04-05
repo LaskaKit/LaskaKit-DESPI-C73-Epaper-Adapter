@@ -23,8 +23,8 @@
 
 #define ENABLE_GxEPD2_GFX 0
 
-#include <GxEPD2_BW.h>
-#include <GxEPD2_3C.h>
+//#include <GxEPD2_BW.h>
+//#include <GxEPD2_3C.h>
 #include <GxEPD2_7C.h>
 #include <Fonts/FreeMonoBold9pt7b.h>
 #include "bitmaps/Bitmaps7c800x480.h" // 7.3" 7-color

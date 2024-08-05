@@ -3,7 +3,7 @@
  * 
  * Board:   LaskaKit ESP32-DEVKit     https://www.laskakit.cz/en/laskakit-esp32-s3-devkit/
  * Display: Good Display GDEY073D46   https://www.laskakit.cz/en/good-display-gdey073d46-7-3--800x480-epaper-barevny-displej/
- * Adapter: Good Display DESPI-C73    
+ * Adapter: LaskaKit SPI adaptér      https://www.laskakit.cz/en/laskakit-spi-adapter-pro-7-3--e-paper-barevny-displej/  
  *
  * Email:podpora@laskakit.cz
  * Web:laskakit.cz

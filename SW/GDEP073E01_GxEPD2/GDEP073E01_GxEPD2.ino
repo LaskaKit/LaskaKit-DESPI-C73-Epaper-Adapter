@@ -1,4 +1,4 @@
-/* Display test for Good Display GDEP073E01. Not yet fulli working. Different colors.
+/* Display test for Good Display GDEP073E01
  * example from GxEPD2 library is used
  * 
  * Board:   LaskaKit ESP32-DEVKit     https://www.laskakit.cz/en/laskakit-esp32-s3-devkit/
@@ -13,8 +13,8 @@
 #define MOSI  11          //uSUP SPI connector LaskaKit  ESP32-S3-DEVKit
 #define BUSY  13          //uSUP SPI connector LaskaKit  ESP32-S3-DEVKit
 #define CS    10          //uSUP SPI connector LaskaKit  ESP32-S3-DEVKit
-#define RES   18
-#define DC    17
+#define RST   40
+#define DC    41
 #define USUP_POWER  47 //uSUP connector power output pin
 
 // Display Library example for SPI e-paper panels from Dalian Good Display.
@@ -32,7 +32,7 @@
 
 #define SLEEP_SEC 15         // Measurement interval (seconds)
 
-GxEPD2_7C < GxEPD2_730c_GDEY073D46, GxEPD2_730c_GDEY073D46::HEIGHT / 4 > display(GxEPD2_730c_GDEY073D46(CS, DC, RES, BUSY)); // GDEY073D46 800x480 7-color, Not yet fulli working. Different colors.
+GxEPD2_7C < GxEPD2_730c_GDEP073E01, GxEPD2_730c_GDEP073E01::HEIGHT / 4 > display(GxEPD2_730c_GDEP073E01(SS, DC, RST, BUSY)); // GDEP073E01 800x480 7-color, (E350911HF 94V-0 F-6 ROHS 24141)
 
 void setup()
 {
@@ -116,11 +116,8 @@ const char HelloEpaper[] = "Hello E-Paper!";
 
 void drawBitmaps7c800x480()
 {
-  if ((display.epd2.panel == GxEPD2::GDEY073D46) || (display.epd2.panel == GxEPD2::ACeP730))
-  {
-    display.epd2.drawDemoBitmap(Bitmap7c800x480, 0, 0, 0, 800, 480, 0, false, true); // special format
-    delay(5000);
-  }
+  display.epd2.drawDemoBitmap(Bitmap7c800x480, 0, 0, 0, 800, 480, 0, false, true); // special format
+  delay(5000);
 }
 
 void helloWorld()
